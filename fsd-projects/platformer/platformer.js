@@ -29,22 +29,21 @@ $(function () {
     // TODO 1 - Enable the Grid
     // toggleGrid();
 
+    for (let i = 0; i < 5; i++) {
+      // TODO 2 - Create Platforms
+      createPlatform(300 + i * 100, canvas.height - i * 100 - 100, 200, 20);
 
-    // TODO 2 - Create Platforms
+      // TODO 3 - Create Collectables
+      createCollectable(
+        Object.keys(collectableList)[i],
+        150 + i * 100,
+        canvas.height - i * 100 - 100
+      );
 
+      // TODO 4 - Create Cannons
+      createCannon("right", canvas.height - i * 100 - 100, 2000 + i * 50);
+    }
 
-
-
-    // TODO 3 - Create Collectables
-
-
-
-    
-    // TODO 4 - Create Cannons
-
-
-    
-    
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
     //////////////////////////////////
